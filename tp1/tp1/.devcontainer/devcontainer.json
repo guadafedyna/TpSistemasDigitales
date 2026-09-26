@@ -1,16 +1,10 @@
 {
   "name": "sd-dev",
   "image": "docker.io/twint/sd:latest",
-  "remoteUser": "ubuntu",
-  "updateRemoteUserUID": true,
-  "initializeCommand": "xhost +local:root",
   "features": {},
   "runArgs": [
-    "--platform=linux/amd64",
     "--net=host",
-    "--ipc=host",
-    "--env=DISPLAY=${localEnv:DISPLAY}",
-    "--volume=/tmp/.X11-unix:/tmp/.X11-unix"
+    "--ipc=host"
   ],
   "containerEnv": {
     "WINIT_UNIX_BACKEND": "x11",
